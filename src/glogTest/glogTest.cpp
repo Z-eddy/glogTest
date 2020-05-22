@@ -32,10 +32,12 @@ int main(int argc,char *argv[])
 	FLAGS_log_dir = "./logs/";//设置存访的文件夹
 	FLAGS_colorlogtostderr = true;//设置stderr输出的字体是否区分颜色
 	FLAGS_alsologtostderr = true;//是否同时输入到文件和stderr
+	FLAGS_v = 3;//VLOG只记录<=3的日志
 	//FLAGS_logtostderr = true;//全部输出到stderr中
 	google::InitGoogleLogging(argv[0]);//根据获得的运行程序名来命名文件,也可以自定义指定程序名
 	//gflags::ParseCommandLineFlags(&argc, &argv, true);//此必须启用gflags的lib、include后,才能通过命令行预设FLAGS的值
 	//google::SetStderrLogging(google::INFO);//输入到stderr的级别
+	VLOG(3) << "test";
 	LOG(INFO) << "test0";//白色字体
 	LOG(WARNING) << "test1";//黄色字体
 	LOG(ERROR) << "test2";//红色字体
