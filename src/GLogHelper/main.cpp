@@ -6,8 +6,6 @@ using std::ends;
 
 int main()
 {
-	GLogHelper glog();
-	int arr[2];
-	int a = arr[5];
-	LOG(INFO) << "test";
+	GLogHelper a;
+	LOG(WARNING) << "test";
 }
